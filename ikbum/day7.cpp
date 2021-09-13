@@ -12,7 +12,7 @@ int main (){
     } 
     for (int l = 0; l < 15; l++){
         for (int k = 0; k <5; k++){
-            if(int(str[k][l]) != 32){
+            if(int(str[k][l]) != 0){
             cout << str[k][l];
             }
         }
