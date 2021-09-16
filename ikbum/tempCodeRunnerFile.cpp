@@ -1,20 +1,21 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
-int main (){
-    char str[5][15] = {"",};
-    int cnt = 0;
+int main(){
+    string num1, num2, result;
+    int sol;
+    cin >> num1 >> num2;
 
-    for(int i = 0; i < 5; i ++){
-        cin >> str[i];
-    } 
-    for (int l = 0; l < 15; l++){
-        for (int k = 0; k <5; k++){
-            if(int(str[k][l]) != 32){
-            cout << str[k][l];
-            }
-        }
-    }
+    reverse(num1.begin(), num1.end());
+    reverse(num2.begin(), num2.end());
+
+    sol = stoi(num1) + stoi(num2);
+
+    result = to_string(sol);
+
+    reverse(result.begin(), result.end());
+    cout << result;
 }
