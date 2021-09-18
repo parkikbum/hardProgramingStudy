@@ -1,23 +1,25 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
 using namespace std;
 
-int Rev(int x);
-int Rev(int x) {
-	int revnum;
-
-	string tmp = to_string(x);
-	reverse(tmp.begin(), tmp.end());
-
-	revnum = stoi(tmp);
-	return revnum;
-}
-
 int main() {
-	int x, y;
-	cin >> x >> y;
-	cout << (Rev(Rev(x) + Rev(y)));
+	int N;
+	cin >> N;
 
-	return 0;
+	string qs;
+	int difficulty;
+
+	cin >> qs >> difficulty;
+	for (int i = 0; i < N - 1; i++) {
+		int tmp;
+		string strtmp;
+
+		cin >> strtmp >> tmp;
+		if (difficulty > tmp) {
+			qs = strtmp;
+			difficulty = tmp;
+		}
+	}
+
+	cout << qs;
 }
