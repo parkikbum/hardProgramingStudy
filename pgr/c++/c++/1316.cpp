@@ -5,34 +5,29 @@
 using namespace std;
 
 int main() {
-    int n = 0;
-    int result = 0;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        string str;
-        int sol = 0;
-        char c = ' ';
-        int cnt = 0;
-        int nCnt = 0;
-        cin >> str;
+	int N;
+	cin >> N;
 
-        for (int k = 0; k < str.length(); k++) {
-            cnt = count(str.begin(), str.end(), str[k]);
-            c = str[k];
+	int isgroupnum = 0;
+	int j = 0;
 
-            if (str[k + cnt - 1] == c) {
-                sol = sol + 1;
-                k = k + cnt - 1;
-            }
-            else {
-                nCnt = nCnt + 1;
-                break;
-            }
-        }
-        if (nCnt == 0) {
-            result = result + 1;
-        }
-    }
-    cout << result << endl;
+	for (int i = 0; i < N; i++) {
+		string word;
+		cin >> word;
 
+		int arr[26] = { 0, };
+		arr[word[0] - 97] = 1;
+
+		for (j = 1; j < word.length(); j++) {
+			if (word[j] != word[j - 1])
+				if (arr[word[j] - 97] == 0)
+					arr[word[j] - 97]++;
+				else
+					break;
+		}
+		if (j == word.length())
+			isgroupnum++;
+	}
+	cout << isgroupnum;
+	return 0;
 }
