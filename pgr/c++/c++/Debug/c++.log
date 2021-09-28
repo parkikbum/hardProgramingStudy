@@ -1,2 +1,4 @@
-﻿  2563.cpp
+﻿  1343.cpp
+C:\Users\racoo\source\repos\parkikbum\hardProgramingStudy\pgr\c++\c++\1343.cpp(12,14): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\racoo\source\repos\parkikbum\hardProgramingStudy\pgr\c++\c++\1343.cpp(17,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   c++.vcxproj -> C:\Users\racoo\source\repos\parkikbum\hardProgramingStudy\pgr\c++\Debug\c++.exe
